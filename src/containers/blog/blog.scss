@@ -1,1 +1,50 @@
-@import '../../responsive/mixins';
+@import "../../responsive/mixins";
+.gpt3__blog {
+  display: flex;
+  flex-direction: column;
+  &-heading {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5rem;
+    h1 {
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 62px;
+      line-height: 75px;
+      letter-spacing: -0.04em;
+      @include mobile{
+        font-size: 46px;
+        line-height: 52px;
+      }
+      @include extra_small{
+        font-size: 34px;
+        line-height: 42px;
+      }
+    }
+  }
+  &-container{
+    display: flex;
+    flex-direction: row;
+    @include tablet{
+        flex-direction: column-reverse;
+    }
+    &_groupA{
+        flex: 0.75;
+        margin-right: 2rem;
+        @include tablet{
+            margin: 2rem 0;
+        }
+
+    }
+    &_groupB{
+        flex: 1;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        @include mobile{
+        grid-template-columns: repeat(1, 1fr);
+
+        }
+    }
+  }
+}
