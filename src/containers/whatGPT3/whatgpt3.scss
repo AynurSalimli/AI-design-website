@@ -1,0 +1,113 @@
+@import "../../responsive/mixins";
+.gpt3__whatgpt3 {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: var(--color-footer);
+  background: -moz-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  &-feature {
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+      margin-top: 0.5rem;
+    }
+  }
+  &-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0 2rem;
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0rem;
+    }
+    h1 {
+      font-family: var(--font-family);
+      line-height: 45px;
+      font-weight: 800;
+      font-size: 34px;
+      max-width: 510px;
+      @include mobile {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+    p {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      color: var(--color-subtext);
+      cursor: pointer;
+      @include tablet {
+        margin-top: 1rem;
+      }
+    }
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    @include extra_small {
+      margin: 1rem 0;
+      min-width: 100%;
+    }
+  }
+}
+.gpt3__features-container__feature {
+  @include mobile {
+    flex-direction: column;
+  }
+  @include extra_small {
+    margin: 1rem 0;
+    min-width: 100%;
+  }
+}
+.gpt3__features-container_feature-text {
+  max-width: 700px;
+  @include mobile {
+    margin-top: 0.5rem;
+  }
+}
